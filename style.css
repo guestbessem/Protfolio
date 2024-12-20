@@ -1,9 +1,13 @@
 /* HEADER */
 header {
     background-color: #926969; /* Couleur sombre pour le header */
-    color:#926969 ; /* Texte blanc pour contraste */
+    color: #926969; /* Texte blanc pour contraste */
     padding: 20px;
     text-align: center;
+}
+
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Texte global */
@@ -27,8 +31,7 @@ body, body * {
 .navbar .navbar-brand,
 .navbar .nav-link,
 .navbar .custom-btn {
-    /* Blanc pour tous les liens */
-    text-decoration:underline;
+    text-decoration: underline; /* Blanc pour tous les liens */
 }
 
 .navbar .nav-link:hover,
@@ -39,7 +42,7 @@ body, body * {
 /* ABOUT IMAGE */
 .about img {
     border-radius: 50%;
-    width: 80px;
+    width: 200px;
 }
 
 /* GENERAL CONTAINER */
@@ -57,54 +60,56 @@ body, body * {
 .section {
     padding: 50px 0;
     color: #333; /* Texte sombre */
-    align-items: center;
-    width: 150%;
-   
-  
-}
-.row {
-    max-width: 1000%; /* Largeur maximale de la section */
-    width: 130%; /* S'adapte à la largeur disponible */
-}
-.row.mt-4 {
-    max-width: 96%; /* Limite la largeur à 800px */
-    margin: - 0.5%; /* Centre la section horizontalement */
+    text-align: center;
+    width: 100%; /* Ensure it fits within the viewport */
 }
 
+.row {
+    max-width: 100%; /* Prevent overflow */
+    width: 100%; /* Fit within the container */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.row.mt-4 {
+    margin: 0 auto; /* Center align without negative margins */
+}
 
 .section h2 {
     font-size: 2.5rem;
     text-align: center;
     color: #333; /* Titre sombre */
     margin-bottom: 30px;
-    width: 70%;
-   
+    width: 100%;
 }
-     .centered-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Full height */
-            width: 150%;
-        }
 
-        /* Pour la section cachée au départ */
-        .hidden-section {
-            display: none;
-        }
+.centered-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    width: 100%;
+}
 
-        /* Pour un effet de défilement fluide */
-        html {
-            scroll-behavior: smooth;
-        }
+/* Pour la section cachée au départ */
+.hidden-section {
+    display: none;
+}
+
+/* Pour un effet de défilement fluide */
+html {
+    scroll-behavior: smooth;
+}
+
 /* CARTES */
 .card {
     background-color: #ffffff; /* Fond blanc */
     border: 1px solid #ddd;
     border-radius: 8px;
     margin-bottom: 20px;
-    align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: #333; /* Texte sombre */
 }
@@ -115,22 +120,20 @@ body, body * {
     border-bottom: 1px solid #ddd;
     border-radius: 8px 8px 0 0;
     color: #333; /* Titre sombre */
-    align-items: center;
 }
 
 .card-body {
     padding: 15px;
     color: #555; /* Texte clair */
-    align-items: center;
 }
 
 .card-body h6 {
     font-size: 1rem;
     color: #d9534f; /* Titre rouge */
     font-weight: bold;
-    align-items: center;
 }
-/*   GALERIE*/
+
+/* GALERIE */
 .portfolio {
     text-align: center;
     margin: 50px auto;
@@ -181,12 +184,6 @@ body, body * {
 }
 
 /* GRILLE RESPONSIVE */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
 .col-lg-4, .col-md-6 {
     flex: 1 1 calc(33.333% - 15px); /* 3 colonnes */
     max-width: calc(33.333% - 15px);
@@ -232,10 +229,10 @@ footer .copyright {
         font-size: 1.2em;
     }
 }
+
 .form-container {
-    max-width: 1000px;
-    margin:auto;
-    margin-left: -25%;
+    max-width: 100%;
+    margin: auto;
 }
 
 .custom-btn {
@@ -246,7 +243,7 @@ footer .copyright {
 
 .custom-btn:hover {
     background-color: #7a5d5d !important; /* Couleur plus foncée pour l'effet de survol */
-    border-color: #7a5d5d !important; /* Couleur plus foncée pour l'effet de survol */
+    border-color: #7a5d5d !important;
 }
 
 .error {
