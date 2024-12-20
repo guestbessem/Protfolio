@@ -1,0 +1,255 @@
+/* HEADER */
+header {
+    background-color: #926969; /* Couleur sombre pour le header */
+    color:#926969 ; /* Texte blanc pour contraste */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Texte global */
+body, body * {
+    color: #333 !important; /* Texte sombre par défaut */
+}
+
+/* NAVBAR */
+.navbar {
+    padding: 0.3rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: #856565; /* Fond de la barre de navigation */
+    color: #ffffff; /* Texte blanc */
+    transition: all 300ms ease-in-out;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .custom-btn {
+    /* Blanc pour tous les liens */
+    text-decoration:underline;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #f9c7c7; /* Rose clair au survol */
+}
+
+/* ABOUT IMAGE */
+.about img {
+    border-radius: 50%;
+    width: 80px;
+}
+
+/* GENERAL CONTAINER */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* Fond blanc pour contraste */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333; /* Texte sombre pour lisibilité */
+}
+
+/* SECTIONS */
+.section {
+    padding: 50px 0;
+    color: #333; /* Texte sombre */
+    align-items: center;
+    width: 150%;
+   
+  
+}
+.row {
+    max-width: 1000%; /* Largeur maximale de la section */
+    width: 130%; /* S'adapte à la largeur disponible */
+}
+.row.mt-4 {
+    max-width: 96%; /* Limite la largeur à 800px */
+    margin: - 0.5%; /* Centre la section horizontalement */
+}
+
+
+.section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #333; /* Titre sombre */
+    margin-bottom: 30px;
+    width: 70%;
+   
+}
+     .centered-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height */
+            width: 150%;
+        }
+
+        /* Pour la section cachée au départ */
+        .hidden-section {
+            display: none;
+        }
+
+        /* Pour un effet de défilement fluide */
+        html {
+            scroll-behavior: smooth;
+        }
+/* CARTES */
+.card {
+    background-color: #ffffff; /* Fond blanc */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333; /* Texte sombre */
+}
+
+.card-header {
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    border-radius: 8px 8px 0 0;
+    color: #333; /* Titre sombre */
+    align-items: center;
+}
+
+.card-body {
+    padding: 15px;
+    color: #555; /* Texte clair */
+    align-items: center;
+}
+
+.card-body h6 {
+    font-size: 1rem;
+    color: #d9534f; /* Titre rouge */
+    font-weight: bold;
+    align-items: center;
+}
+/*   GALERIE*/
+.portfolio {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-btn:hover {
+    background-color: #0056b3;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.project {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project img:hover {
+    transform: scale(1.1);
+}
+
+/* GRILLE RESPONSIVE */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.col-lg-4, .col-md-6 {
+    flex: 1 1 calc(33.333% - 15px); /* 3 colonnes */
+    max-width: calc(33.333% - 15px);
+}
+
+@media (max-width: 768px) {
+    .col-lg-4, .col-md-6 {
+        flex: 1 1 100%; /* 1 colonne sur mobile */
+        max-width: 100%;
+    }
+}
+
+/* PIED DE PAGE */
+footer {
+    background-color: #856565; /* Couleur sombre */
+    padding: 20px 0;
+    color: #ffffff; /* Texte blanc */
+    text-align: center;
+}
+
+footer .item.social a {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .item.social a:hover {
+    color: #f9c7c7; /* Couleur rose clair au survol */
+}
+
+footer .copyright {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+    footer .item.social a {
+        margin: 0 10px;
+        font-size: 1.2em;
+    }
+}
+.form-container {
+    max-width: 1000px;
+    margin:auto;
+    margin-left: -25%;
+}
+
+.custom-btn {
+    background-color: #926969 !important; /* Couleur de fond du bouton */
+    border-color: #926969 !important; /* Couleur de la bordure du bouton */
+    color: white !important; /* Couleur du texte du bouton */
+}
+
+.custom-btn:hover {
+    background-color: #7a5d5d !important; /* Couleur plus foncée pour l'effet de survol */
+    border-color: #7a5d5d !important; /* Couleur plus foncée pour l'effet de survol */
+}
+
+.error {
+    color: red;
+    margin-top: 0.5em;
+}
